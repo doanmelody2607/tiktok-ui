@@ -8,6 +8,7 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -41,7 +42,7 @@ const Header = () => {
                     )}
                 >
                     <div className={cx('search')}>
-                        <input placeholder="Search accounts and videos" spellcheck={false} />
+                        <input placeholder="Search accounts and videos" spellCheck={false} />
 
                         <button className={cx('clear')}>
                             <FontAwesomeIcon icon={faCircleXmark} />
@@ -54,7 +55,10 @@ const Header = () => {
                     </div>
                 </Tippy>
 
-                <div className={cx('actions')}></div>
+                <div className={cx('actions')}>
+                    <Button text>Upload</Button>
+                    <Button primary>Log in</Button>
+                </div>
             </div>
         </header>
     );
